@@ -28,12 +28,12 @@ function verificarAutenticacao() {
     const autenticado = localStorage.getItem('comite_autenticado');
     if (autenticado !== 'true') {
         alert('Acesso restrito ao Comitê. Faça login para continuar.');
-        window.location.href = '../login.html';
+        window.location.href = 'pages/login.html';
     }
 }
 
 // Encerra a sessão
 function fazerLogout() {
     localStorage.removeItem('comite_autenticado');
-    window.location.href = '../login.html';
+    window.location.href = 'pages/login.html';
 }
