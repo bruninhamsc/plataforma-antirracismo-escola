@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Antirracismo Escolar</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+
+    <!-- Navegação Superior -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span>✊🏿 Antirracismo Escolar</span>
+        </div>
+        <div class="nav-links">
+            <a href="#sobre">Sobre o Comitê</a>
+            <a href="#denuncia">Fazer Denúncia</a>
+            <a href="login.html" class="btn-login-nav">Área do Comitê</a>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho Principal (Hero) -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Por uma Escola Antirracista, Segura e Acolhedora</h1>
+            <p>Espaço oficial para escuta ativa, denúncias anônimas e conscientização da nossa comunidade escolar.</p>
+            <a href="#denuncia" class="btn-hero">Registrar uma Ocorrência</a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Seção Informativa -->
+        <section id="sobre" class="card">
+            <h2>O Papel do Comitê Antirracista</h2>
+            <p>Nossa missão é garantir que nenhum estudante ou membro da comunidade escolar passe por episódios de discriminação ou violência racial sem o devido acolhimento e apuração.</p>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>🔒 Anônimo & Sigiloso</h3>
+                    <p>Sua identidade é totalmente protegida caso opte por não se identificar.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>📑 Acompanhamento</h3>
+                    <p>Cada denúncia gera um número de protocolo para verificação do andamento.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🌱 Ação Educativa</h3>
+                    <p>Os relatos auxiliam a criar campanhas e oficinas preventivas na escola.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Denúncia -->
+        <section id="denuncia" class="card">
+            <h2>Canal Virtual de Denúncias</h2>
+            <p class="subtitle">Preencha o formulário abaixo para enviar seu relato diretamente ao Comitê.</p>
+
+            <form id="complaintForm">
+                <div class="form-group anonymous-toggle">
+                    <input type="checkbox" id="isAnonymous">
+                    <label for="isAnonymous"><strong>Desejo fazer uma denúncia ANÔNIMA</strong></label>
+                </div>
+
+                <div class="form-group" id="nameContainer">
+                    <label for="studentName">Seu Nome / Turma (Opcional):</label>
+                    <input type="text" id="studentName" placeholder="Ex: Maria Silva - 2º Ano B">
+                </div>
+
+                <div class="form-group">
+                    <label for="incidentType">Tipo de Ocorrência:</label>
+                    <select id="incidentType" required>
+                        <option value="">Selecione o tipo de atitude...</option>
+                        <option value="Ofensa Verbal / Injúria">Ofensa Verbal ou 'Brincadeira' Criminosa</option>
+                        <option value="Exclusão / Segregação">Exclusão em Atividades ou Grupos</option>
+                        <option value="Racismo Recreativo">Piadas / Memes Preconceituosos</option>
+                        <option value="Cyberbullying Racista">Agressão / Ofensa em Redes Sociais</option>
+                        <option value="Outro">Outro tipo de atitude discriminatória</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descrição Detalhada:</label>
+                    <textarea id="description" rows="5" required placeholder="Relate o ocorrido com o máximo de detalhes (data, local aproximado, como aconteceu)..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Registro com Segurança</button>
+            </form>
+
+            <div id="successMessage" class="alert-success">
+                ✅ Denúncia registrada com sucesso! Guarde o seu número de protocolo: <strong id="protocolNumber"></strong>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; Plataforma Antirracismo Escolar - Projeto de Conscientização e Cidadania.</p>
+    </footer>
+
+    <script src="js/student.js"></script>
+</body>
+</html>
