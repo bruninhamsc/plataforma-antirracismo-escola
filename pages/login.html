@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Comitê Antirracista</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Acesso ao Comitê</h2>
+            <p>Área restrita para a equipe responsável pelas apurações.</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuário / E-mail:</label>
+                    <input type="text" id="username" placeholder="Digite seu usuário" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+
+                <div id="loginError" class="alert-error">
+                    Usuário ou senha inválidos!
+                </div>
+
+                <button type="submit" class="btn-submit">Entrar no Painel</button>
+            </form>
+            
+            <a href="index.html" class="back-link">← Voltar ao Canal de Denúncias</a>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
